@@ -13,12 +13,12 @@ namespace text_from_photo_master
 {
     public partial class Form1 : Form, Iupdatable
     {
-<<<<<<< Updated upstream
+
         Sender sndr = null;
-=======
+
         private Receiver receiver = null;
         public string folderpath = @"TempData\";
->>>>>>> Stashed changes
+
         public Form1()
         {
             InitializeComponent();
