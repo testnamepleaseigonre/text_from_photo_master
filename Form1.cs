@@ -11,9 +11,14 @@ using System.Windows.Forms;
 
 namespace text_from_photo_master
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, Iupdatable
     {
+<<<<<<< Updated upstream
         Sender sndr = null;
+=======
+        private Receiver receiver = null;
+        public string folderpath = @"TempData\";
+>>>>>>> Stashed changes
         public Form1()
         {
             InitializeComponent();
@@ -36,6 +41,31 @@ namespace text_from_photo_master
                 sndr.Send();
             });
             senderThread.Start();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (receiver == null)
+            {
+                MessageBox.Show("Recieving!");
+                Thread receiverThread = new Thread(() =>
+                {
+                    receiver = new Receiver(Environment.ExpandEnvironmentVariables(folderpath), this);
+                    receiver.Start();
+                });
+                receiverThread.Start();
+
+            }
+        }
+
+        public void displayText(string text)
+        {
+            throw new NotImplementedException();
         }
     }
 }

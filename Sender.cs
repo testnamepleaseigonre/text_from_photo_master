@@ -22,11 +22,17 @@ namespace text_from_photo_master
 
         public void Send()
         {
+<<<<<<< Updated upstream
             try
             {
                 IPAddress receiverIP = IPAddress.Parse("192.168.1.149");
                 IPEndPoint endPoint = new IPEndPoint(receiverIP, 2021);
                 Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+=======
+            IPAddress receiverIP = IPAddress.Parse("10.16.5.65"); 
+            IPEndPoint endPoint = new IPEndPoint(receiverIP, 2021); 
+            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp); 
+>>>>>>> Stashed changes
 
                 byte[] fileNameBytes = Encoding.ASCII.GetBytes(Path.GetFileName(fileName));
                 byte[] fileNameLength = BitConverter.GetBytes(Path.GetFileName(fileName).Length);

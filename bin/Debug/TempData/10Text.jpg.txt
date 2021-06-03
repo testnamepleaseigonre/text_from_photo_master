@@ -1,0 +1,33 @@
+for training the system is very small (2 out of the 3 subjects recorded in this scenario).
+In order to analyze the influence of the amount of data, we repeat the same experiments
+but using the ideal-placement data for training the system. Although there is a mismatch
+in the conditions, the amount of available data for training would increase a lot (from 2
+to 16 subjects). The experiments are shown in Table 6. In the “Train Set” and “Test Set”
+columns, we have also included the number of subjects considered for training and test-
+ing the system.
+
+The results show that when being trained with ideal datasets and tested with mutual
+datasets, the system reaches a very good accuracy though the training and testing sets
+come from different placement scenarios. For example, for mutual4, the accuracy goes
+from 87.9 to 99.0% (the first row). These results support the hypothesis that the amount
+of data for training is an important factor in the system performance.
+
+With the idea of cross-dataset experiment, we go further on the ideal-placement and
+self-placement scenarios (the last row in Table 6). As Table 6 shows, there is not a signifi-
+cant difference on the accuracy when testing with self-placement dataset and training
+with ideal or self placement (99.1 vs. 98.9%, difference lower than the confidence interval
+0.5%). In this case, the amount of data available in ideal-placement and self-placement
+scenarios is the same.
+
+System analysis in a new domain: home care monitoring
+
+In the introduction, we commented two main applications of HAR: physical exercise
+monitoring and home care monitoring. The REALDISP dataset is focused on the first
+one: physical exercise monitoring. In order to verify the viability of the proposed system
+in a home care monitoring application, we have evaluated the best system configuration
+with another dataset: the OPPORTUNITY dataset for HAR from wearable, object, and
+ambient sensors [30]. The recordings include daily morning activities: getting up from
+the bed, preparing and having breakfast (a coffee and a salami sandwich) and clean-
+ing the kitchen latter. This dataset is a very popular HAR dataset on this research field.
+There is no constraining on the location or body posture in any of the scripted activities.
+
